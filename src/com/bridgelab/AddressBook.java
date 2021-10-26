@@ -1,14 +1,12 @@
 package com.bridgelab;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class AddressBook {
 
     public static void main(String[] args){
         System.out.println("WELCOME IN ADDRESS BOOK PROGRAM");
         Scanner sc = new Scanner(System.in);
-        ArrayList<Contact_info> contacts=new ArrayList<Contact_info>();
 
         System.out.println("Add new contact details to Address_Book");
 
@@ -34,7 +32,6 @@ public class AddressBook {
         int zip = sc.nextInt();
 
         Contact_info contact=new Contact_info(firstname,lastname,email,phone,city,state,zip);
-        System.out.println(contacts);
     }
 
 }
