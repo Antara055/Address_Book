@@ -27,10 +27,10 @@ public class AddressBook {
 
         System.out.println(" First Name: "+contact_info.getName()+
                 "\n Email-id: "+contact_info.getEmail()+
-                "\n Cell Num: "+contact_info.getPhoneNumber()+
+                "\n Phone Number: "+contact_info.getPhoneNumber()+
                 "\n City: "+contact_info.getCity()+
                 "\n State: "+contact_info.getState()+
-                "\n Pin: "+contact_info.getZip());
+                "\n Zip-Pin: "+contact_info.getZip());
 
     }
 }
