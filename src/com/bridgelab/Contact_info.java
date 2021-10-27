@@ -19,7 +19,6 @@ public class Contact_info {
         this.state = state;
         this.zip = zip;
     }
-<<<<<<< HEAD
     @Override
     public String toString() {
         return "Contacts{"+
@@ -31,6 +30,5 @@ public class Contact_info {
                 ", zipCode=" + zip +
                 '}';
     }
-=======
->>>>>>> 0ffd8bf0165b98b8e1a834b02f57721164c2a4b9
+
 }
