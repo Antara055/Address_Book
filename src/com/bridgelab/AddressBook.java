@@ -4,14 +4,15 @@ import java.util.Scanner;
 
 
 public class AddressBook {
-
+     //main method executed
     public static void main(String[] args) {
         System.out.println("WELCOME IN ADDRESS BOOK PROGRAM");
         System.out.println("Add new contact details to Address_Book");
+        // By creating object we are Calling Contact from Contact_info
         Contact_info contact_info = new Contact_info();
 
         Scanner sc = new Scanner(System.in);
-
+        //taking input from user through Scanner
         System.out.println("Enter Name: ");
         contact_info.setName(sc.nextLine());
         System.out.println("Enter Email: ");
@@ -24,7 +25,8 @@ public class AddressBook {
         contact_info.setState(sc.nextLine());
         System.out.println("Enter Zip Pin: ");
         contact_info.setZip(sc.nextInt());
-
+        
+        //Displaying the details of user
         System.out.println(" First Name: "+contact_info.getName()+
                 "\n Email-id: "+contact_info.getEmail()+
                 "\n Phone Number: "+contact_info.getPhoneNumber()+
