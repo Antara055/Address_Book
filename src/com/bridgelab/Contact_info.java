@@ -58,24 +58,3 @@ public class Contact_info {
         this.zip = zip;
     }
 }
-
-
-
-   /* @Override
-    public String toString() {
-        return "AddressBook \n [Name=" + name +",\n phoneNumber=" + phone_no + ", email=" + email +
-                ",\n city="+ city + ",\n state=" + state + ", zip=" + zip +  "]";
-    }
-
-    Using constructor to assign the values to the variables
-
-    public Contact_info(String name, String email, long phone_no, String city, String state, int zip) {
-        this.name = name;
-        this.email = email;
-        this.phone_no = phone_no;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-    }
-    */
-
