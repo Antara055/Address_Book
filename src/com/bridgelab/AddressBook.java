@@ -21,6 +21,7 @@ public class AddressBook {
             System.out.println("1: ADD");
             System.out.println("2: DISPLAY");
             System.out.println("3:EDIT");
+            System.out.println("4:DELETE");
             System.out.println("0: EXIT");
             System.out.println("ENTER YOUR CHOICE :");
             choice = s.nextInt();
@@ -84,6 +85,26 @@ public class AddressBook {
                         System.out.println("not found");
                     } else
                         System.out.println("edited successfully");
+                    break;
+                case 4:
+                    boolean deleteItemFound=false;
+                    Iterator <Contact_info> delete=addContacts.iterator();
+
+                    System.out.println("ENTER THE NAME TO DELETE");
+                    String nameSearch=sc.nextLine();
+                    while(delete.hasNext()){
+                        Contact_info dataDel=delete.next();
+                        if(nameSearch.equals(dataDel.name)){
+                            delete.remove();
+                            deleteItemFound=true;
+                        }
+                    }
+                    if(!deleteItemFound){
+                        System.out.println("not found");
+                    }
+                    else
+                        System.out.println("deleted successfully");
+                    break;
             }
         }
     }
