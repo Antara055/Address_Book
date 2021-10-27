@@ -3,14 +3,15 @@ package com.bridgelab;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Iterator;
-
+/*@ArrayList has used to save the data
+/@iterator class used to get the content from the object one by one
+*/
 public class AddressBook {
-<<<<<<< HEAD
     //main method executed
     public static void main(String[] args) {
         System.out.println("WELCOME IN ADDRESS BOOK PROGRAM");
         ArrayList<Contact_info> addContacts = new ArrayList<>();
-        //Scanner userInput = new Scanner(System.in);
+        //Scanner class is used to take input from user
         Scanner sc = new Scanner(System.in);
         Scanner s = new Scanner(System.in);
 
@@ -19,9 +20,11 @@ public class AddressBook {
         while (true) {
             System.out.println("1: ADD");
             System.out.println("2: DISPLAY");
-
+            System.out.println("3:EDIT");
+            System.out.println("0: EXIT");
             System.out.println("ENTER YOUR CHOICE :");
             choice = s.nextInt();
+            //switch statements are used to choose a perticular oparation
             switch (choice) {
                 case 1:
                     System.out.println("Enter Name: ");
@@ -38,6 +41,7 @@ public class AddressBook {
                     String state = sc.nextLine();
                     System.out.println("Enter Zip Pin: ");
                     int zip = sc.nextInt();
+                    //addContact.add function is used to add the object type data to the ArrayList object
                     addContacts.add(new Contact_info(name, email, phone, city, state, zip));
                     break;
                 case 2:
@@ -47,42 +51,40 @@ public class AddressBook {
                         System.out.println(show);
                     }
                     break;
+                case 3:
+                    boolean found = false;
+                    Iterator<Contact_info> edit = addContacts.iterator();
+                    System.out.println("Enter the Name who's details you want to edit");
+                    name = sc.nextLine();
+                    while (edit.hasNext()) {
+                        Contact_info newdata = edit.next();
+                        if (newdata.name == name) {
+                            int index = addContacts.indexOf(newdata);
+                            System.out.println("ENTER THE NEW EMAIL ID");
+                            email = sc.nextLine();
+
+                            System.out.println("ENTER THE NEW PHONE NUMBER");
+                            phone = sc.nextInt();
+
+                            System.out.println("ENTER THE NEW CITY");
+                            city = sc.nextLine();
+
+                            System.out.println("ENTER THE NEW STATE");
+                            state = sc.nextLine();
+
+                            System.out.println("ENTER THE NEW ZIP CODE");
+                            zip = sc.nextInt();
+
+                            addContacts.set(index,new Contact_info(name, email, phone, city, state, zip));
+
+                            found = true;
+                        }
+                    }
+                    if (!found) {
+                        System.out.println("not found");
+                    } else
+                        System.out.println("edited successfully");
             }
         }
     }
 }
-
-=======
-     //main method executed
-    public static void main(String[] args) {
-        System.out.println("WELCOME IN ADDRESS BOOK PROGRAM");
-        System.out.println("Add new contact details to Address_Book");
-        // By creating object we are Calling Contact from Contact_info
-        Contact_info contact_info = new Contact_info();
-
-        Scanner sc = new Scanner(System.in);
-        //taking input from user through Scanner
-        System.out.println("Enter Name: ");
-        contact_info.setName(sc.nextLine());
-        System.out.println("Enter Email: ");
-        contact_info.setEmail(sc.nextLine());
-        System.out.println("Enter Phone Number: ");
-        contact_info.setPhoneNumber(sc.nextLong());
-        System.out.println("Enter City: ");
-        contact_info.setCity(sc.nextLine());
-        System.out.println("Enter State: ");
-        contact_info.setState(sc.nextLine());
-        System.out.println("Enter Zip Pin: ");
-        contact_info.setZip(sc.nextInt());
-        
-        //Displaying the details of user
-        System.out.println(" First Name: "+contact_info.getName()+
-                "\n Email-id: "+contact_info.getEmail()+
-                "\n Phone Number: "+contact_info.getPhoneNumber()+
-                "\n City: "+contact_info.getCity()+
-                "\n State: "+contact_info.getState()+
-                "\n Zip-Pin: "+contact_info.getZip());
-
-    }
-}
->>>>>>> 0ffd8bf0165b98b8e1a834b02f57721164c2a4b9
