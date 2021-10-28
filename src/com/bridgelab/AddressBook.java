@@ -58,14 +58,15 @@ public class AddressBook {
                     name = sc.nextLine();
                     while (edit.hasNext()) {
                         Contact_info newdata = edit.next();
-                        if (newdata.name == name) {
+                        if((newdata.name).equals(name)) { 
                             int index = addContacts.indexOf(newdata);
                             System.out.println("ENTER THE NEW EMAIL ID");
                             email = sc.nextLine();
 
                             System.out.println("ENTER THE NEW PHONE NUMBER");
                             phone = sc.nextInt();
-
+                            
+                            sc.nextLine();
                             System.out.println("ENTER THE NEW CITY");
                             city = sc.nextLine();
 
